@@ -16,30 +16,25 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text("RizApp"),
-          leading: IconButton(
-            icon: const Icon(Icons.masks_rounded),
-            onPressed: () {},
-          ),
-          actions: [
-            IconButton(onPressed: () {}, icon: Icon(Icons.access_alarm)),
-            IconButton(onPressed: () {}, icon: Icon(Icons.add_call))
-          ],
-        ),
-        body: GestureDetector(
-          onTap: () {
-            print("Ontap");
-          },
-          child: Center(
-            child: Container(
-              width: 48,
-              height: 46,
-              color: Colors.red,
+          appBar: AppBar(title: const Text("RizApp")),
+          floatingActionButton: FloatingActionButton(onPressed: () {}, child: Icon(Icons.no_transfer)),
+          body: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                TextField(
+                  decoration: InputDecoration(labelText: "Username"),
+                ),
+                TextField(
+                  decoration: InputDecoration(labelText: ("Password")),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                ElevatedButton(onPressed: () {}, child: Text("Login"))
+              ],
             ),
-          ),
-        ),
-      ),
+          )),
     );
   }
 }
