@@ -1,6 +1,7 @@
-# flutter_application_1
 
-A new Flutter project.
+Nama  : Muhammad Rizqi
+Kelas : CE03-01
+NIM   : 1102200050
 
 ## Getting Started
 
