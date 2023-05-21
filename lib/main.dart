@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/listView.dart';
 import 'package:flutter_application_1/secondPage.dart';
 import 'package:flutter_application_1/statefulWidget.dart';
 
@@ -22,16 +23,25 @@ class _MyAppState extends State<MyApp> {
         drawer: Drawer(
             child: ListView(
           children: [
-            ListTile(
-              title: Text("Home")),
+            ListTile(title: Text("Home")),
             ListTile(
               title: Text("Stateful Widget"),
               onTap: () {
                 Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => const stafulWidget(),
-                ),
-              );
+                  MaterialPageRoute(
+                    builder: (context) => const stafulWidget(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              title: Text("List View"),
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const listView(),
+                  ),
+                );
               },
             )
           ],
